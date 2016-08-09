@@ -30,19 +30,17 @@
     margin: 30px 60px;
 }
 #wall_1 {
-    background: url(../Images/swirl_pattern.png) repeat;
+    background: url(../Images/1.png) repeat;
     background-attachment: fixed;
 }
 #wall_2 {
-    background: url(../Images/school.png) repeat;
+    background: url(../Images/2.png) repeat;
     background-attachment: fixed;
 }
 #wall_3 {
-    background: url(../Images/skulls.png) repeat;
+    background: url(../Images/3.png) repeat;
     background-attachment: fixed;
 }
-
-
 
 #nav {
     height: 70px;
