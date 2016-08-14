@@ -1,31 +1,100 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+        <meta charset="UTF-8">
         <title>Wedding</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <meta name="author" content="Matthew James Barber" />
+        <meta name="description" content=""" />
+        <meta name="keywords"  content="Matthew, Barber, Natalie, Cooke, Wedding, High Rocks, Tunbridge Wells, June, 2017" />
+        <meta name="Resource-type" content="Document" />
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-        <script src="js/jquery.stellar.js"></script>
-        <script src="js/scrip.js"></script>
-        <script src="js/jquery.nicescroll.js"></script>
-
-        <script>
-            $(window).stellar();
-        </script>
+        <link rel="stylesheet" type="text/css" href="css\javascript.fullPage.css" />
+        <link rel="stylesheet" type="text/css" href="css\jquery.fullPage.css" />
+        <link rel="stylesheet"" type="text/css"" href="css\stylesheet.css">  
+        <link rel="stylesheet"" type="text/css"" href="css\heart.css">              
+        <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline" rel="stylesheet" type="text/css">
     </head>
+    
     <body>
-        <div id="nav">
-            <div id="logo"><img src="Images/logo.png"></div>
-        </div>
         
-        <h1>We're getting married</h1>
+        <ul id="menu">
+            <li data-menuanchor="aboutPage" class="active"><a href="#aboutPage">about</a></li>
+            <li data-menuanchor="venuePage"><a href="#venuePage">venue</a></li>
+            <li data-menuanchor="hotelPage"><a href="#hotelPage">hotel</a></li>
+            <li data-menuanchor="otherPage"><a href="#otherPage">other</a></li>
+        </ul>
 
-        <div id="wall_1" class="image" data-stellar-background-ratio="0.4" ></div>
-        <div id="content_1" class="content" data-stellar-ratio="2"></div>
+        <div class="heart-shape"></div>
+        <div class="heart-shape-overlay">
+            <a class="heart-shape-rsvp" href="mailto:moo.j.barber@gmail.com?Subject=So%20excited%20for%20the%20wedding">
+                <span>R.S.V.P</span>
+            </a>
+        </div>
 
-        <div id="wall_2" class="image" data-stellar-background-ratio="0.4" ></div>
-        <div id="content_2" class="content" data-stellar-ratio="2"></div>
+        <div id="fullpage">
 
-        <div id="wall_3" class="image" data-stellar-background-ratio="0.4" ></div>
-        <div id="content_3" class="content" data-stellar-ratio="2"></div>
+            <div class="section active">
+                <h1>Barber Wedding</h1>
+                <img id="homepageImage" src="img/homepageImage.png"></img>
+                <p>He stole her heart, so she is stealing his last name.</p> 
+            </div>
+
+            <div class="section">
+                <div class="slide active">
+                    <div class="intro">
+                        <h1>High Rocks</h1>
+                        <h2>High Rocks Ln, Tunbridge Wells TN3 9JJ</h2>
+                    </div>
+                </div>
+            </div>  
+            <div class="section">
+                <div class="slide">
+                    <div class="intro">
+                        <h1>Hotel 1</h1>
+                        <p>Transport Provided</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="intro">
+                        <h1>Hotel 2</h1>
+                        <p>Blah</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="intro">
+                        <h1>Hotel 3</h1>
+                        <p>Transport Provided</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="intro">
+                        <h1>Test</h1>
+                        <p>Blah</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="intro">
+                    <h1>Other</h1>
+                    <p>Not sure what this page is for yet</p>
+                </div>
+            </div>
+        </div>
+    
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js\jquery.fullPage.min.js"></script>
+        
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#fullpage').fullpage({
+                    sectionsColor: ['#f3b5a8', '#f6c3b9', '#f8d2ca', '#fae1dc'],
+                    anchors: ['aboutPage', 'venuePage', 'hotelPage', 'otherPage'],
+                    menu: '#menu',
+                    css3: true,
+                    scrollingSpeed: 1000
+                });
+            });
+        </script>
+
     </body>
 </html>

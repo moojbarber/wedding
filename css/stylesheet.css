@@ -1,0 +1,82 @@
+:root {
+    --primary-color: #5b4f5b;
+    --accent-color: #a8e6f3;
+}
+
+/*No padding/Margin*/
+body {
+    margin:0px;
+    padding:0px;
+}
+
+h1, #menu li a {
+    font-family: 'Bungee Hairline', cursive;
+}
+
+p {
+    font-size: 20px;
+    color: var(--accent-color);
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#menu {
+    /*Remove bullet from <ul>*/
+    list-style: none;
+    position:absolute;
+    z-index:100;
+}
+
+#menu li {
+    /*Display menu horizontally*/
+    display: inline-block;
+    margin: 10px;
+}
+
+#menu li a {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 2em;
+
+    /*Remove underline from link*/       
+    text-decoration: none;
+    
+    /*Make link slowly change between hover*/
+    transition: all 0.5s ease;
+}
+
+/*Underline the active menu item*/
+#menu li.active a {    
+    text-decoration: underline;
+    text-shadow:1px 0px #555;
+}
+
+#menu li a:hover {    
+    color: var(--accent-color);
+}
+
+.section {
+    text-align: center;
+    vertical-align: text-top;
+}
+
+h1 {
+    color:var(--primary-color);   
+    font-size: 6em;
+    margin:0px;
+    padding:0px;
+    height:200px;    
+}
+
+h2 {
+    color: var(--accent-color);
+    font-size: 2em;
+    font-family: calibri;
+}
+
+
+
+#homepageImage {
+    border: 5px solid var(--primary-color);
+    -webkit-box-shadow: 0 0 6px var(--primary-color),0 6px 12px rgba(0,0,0,.32);
+}
+
