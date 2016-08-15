@@ -1,6 +1,6 @@
 :root {
     --primary-color: #5b4f5b;
-    --accent-color: #a8e6f3;
+    --accent-color: #d5f3f9;
 }
 
 /*No padding/Margin*/
@@ -14,9 +14,10 @@ h1, #menu li a {
 }
 
 p {
-    font-size: 20px;
-    color: var(--accent-color);
-    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 1.5em;
+    color: var(--primary-color);
+    font-family: 'Tillana', cursive;
+    font-weight: lighter;
 }
 
 #menu {
@@ -24,6 +25,22 @@ p {
     list-style: none;
     position:absolute;
     z-index:100;
+}
+
+#menu-underline {
+    border: 0.1em solid var(--primary-color);
+    -webkit-box-shadow: 0 0 6px var(--primary-color),0 6px 12px rgba(0,0,0,.32);
+    -moz-box-shadow: 0 0 6px var(--primary-color),0 6px 12px rgba(0,0,0,.32);
+    -o-box-shadow: 0 0 6px var(--primary-color),0 6px 12px rgba(0,0,0,.32);
+    -ms-box-shadow: 0 0 6px var(--primary-color),0 6px 12px rgba(0,0,0,.32);
+    box-shadow: 0 0 6px var(--primary-color),0 6px 12px rgba(0,0,0,.32);
+
+
+    position: fixed;
+    top: 100px;
+    left:0px;
+    width: 550px;
+    z-index: 1000;
 }
 
 #menu li {
@@ -35,7 +52,7 @@ p {
 #menu li a {
     color: var(--primary-color);
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.8em;
 
     /*Remove underline from link*/       
     text-decoration: none;
@@ -47,7 +64,6 @@ p {
 /*Underline the active menu item*/
 #menu li.active a {    
     text-decoration: underline;
-    text-shadow:1px 0px #555;
 }
 
 #menu li a:hover {    
@@ -73,10 +89,38 @@ h2 {
     font-family: calibri;
 }
 
-
-
 #homepageImage {
     border: 5px solid var(--primary-color);
     -webkit-box-shadow: 0 0 6px var(--primary-color),0 6px 12px rgba(0,0,0,.32);
+    -moz-box-shadow: 0 0 6px var(--primary-color),0 6px 12px rgba(0,0,0,.32);
+    -o-box-shadow: 0 0 6px var(--primary-color),0 6px 12px rgba(0,0,0,.32);
+    -ms-box-shadow: 0 0 6px var(--primary-color),0 6px 12px rgba(0,0,0,.32);
+    box-shadow: 0 0 6px var(--primary-color),0 6px 12px rgba(0,0,0,.32);
 }
 
+
+
+@-webkit-keyframes fadeIn { from { left:0px} to { } }
+@-moz-keyframes fadeIn { from { opacity:0;  left:0px} to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0;  left:0px } to { opacity:1; } }
+ 
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+ 
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+ 
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+ 
+.fade-in.one {
+-webkit-animation-delay: 0.1s;
+-moz-animation-delay: 0.7s;
+animation-delay: 0.7s;
+}
